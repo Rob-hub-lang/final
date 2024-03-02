@@ -242,9 +242,9 @@
         .on("click", clicked);
 
       Promise.all([
-        d3.json("./data/counties-albers-10m.json"),
-        d3.csv("./data/2024/verifier-machines.csv"),
-        d3.csv("./data/2024/verifier-officials.csv"),
+        d3.json("https://raw.githubusercontent.com/Rob-hub-lang/final/master/data/counties-albers-10m.json"),
+        d3.csv("https://raw.githubusercontent.com/Rob-hub-lang/final/master/data/2024/verifier-machines.csv"),
+        d3.csv("https://raw.githubusercontent.com/Rob-hub-lang/final/master/data/2024/verifier-officials.csv"),
       ]).then(ready);
 
       const path = d3.geoPath();
@@ -262,9 +262,9 @@
         const selectedYear = yearSelector.value;
 
         Promise.all([
-          d3.json("./data/counties-albers-10m.json"),
-          d3.csv(`./data/${selectedYear}/verifier-machines.csv`),
-          d3.csv(`./data/${selectedYear}/verifier-officials.csv`),
+          d3.json("https://raw.githubusercontent.com/Rob-hub-lang/final/master/data/counties-albers-10m.json"),
+          d3.csv(`https://raw.githubusercontent.com/Rob-hub-lang/final/master/data/${selectedYear}/verifier-machines.csv`),
+          d3.csv(`https://raw.githubusercontent.com/Rob-hub-lang/final/master/data/${selectedYear}/verifier-officials.csv`),
         ]).then(ready);
       });
 
